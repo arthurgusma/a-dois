@@ -1,5 +1,5 @@
 import React from 'react';
-import { StatusBar, Text, View } from "react-native"
+import { Text, View } from "react-native"
 import { styles } from "./styles"
 import { IconBell, IconSettings } from '@tabler/icons-react-native'
 import { Avatar, AvatarFallback, AvatarImage } from '../Avatar';
@@ -7,7 +7,6 @@ import { Avatar, AvatarFallback, AvatarImage } from '../Avatar';
 export default function Header() {
     return (
         <View style={styles.container}>
-            <StatusBar barStyle={"light-content"} />
             <View style={styles.nameContainer}>
                 <Avatar alt='profile image'>
                     <AvatarImage

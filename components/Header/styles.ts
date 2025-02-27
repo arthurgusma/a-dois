@@ -17,7 +17,8 @@ export const styles = StyleSheet.create({
     title: {
         color: colors.blue.base,
         fontSize: 16,
-        fontWeight:  '600'
+        fontWeight:  '600',
+        marginLeft: 10
     },
     menu: {
         flexDirection: "row"

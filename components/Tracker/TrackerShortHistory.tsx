@@ -1,5 +1,4 @@
 import { FlatList, Text, View } from "react-native";
-import { styles } from "./styles";
 import { IconChevronRight } from "@tabler/icons-react-native";
 import { subDays } from 'date-fns'
 
@@ -21,22 +20,22 @@ export default function TrackerShortHistory({title}: TrackerShortHistoryProps) {
     ];
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.title}>{title}</Text>
-            <View style={styles.history}>
-                <FlatList 
-                    style={{ flex: 1, flexDirection: "row", gap: 20 }}
-                    data={pastWeek} 
-                    renderItem={({ item }) => {
-                        return (
-                            <View style={styles.displayDay}>
-                                <Text>{item}</Text>
-                            </View>
-                        )
-                    }}
-                />
+        <View className="row my-4">
+            <View className="flex-row justify-between items-center my-4">
+                <Text className="text-white text-xl">{title}</Text>
                 <IconChevronRight />
             </View>
+            <FlatList 
+                style={{ flex: 1, flexDirection: "row", gap: 10 }}
+                data={pastWeek} 
+                renderItem={({ item }) => {
+                    return (
+                        <View className="rounded-full bg-white p-2">
+                            <Text>{item}</Text>
+                        </View>
+                    )
+                }}
+            />
         </View>
     )
 }
